@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Square Root Finder</title>
+        <style>
+            *{font-size:50px;font-family:Arial;}
+            body{background-color:burlywood;}
+            body{background-image:url("https://degreessymbolsign.com/wp-content/uploads/2021/05/maxresdefault.jpg")}
+        </style>
+        <script>
+            function compute()
+{
+    event.preventDefault();
+    let num=document.getElementById("num");
+    let ans=document.getElementById("ans");
+    let n =parseFloat(num.value);
+    let r =Math.sqrt(n);
+    let res="sqrt= "+ r.toFixed(2);
+    ans.innerHTML=res;
+}
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Square Root Finder</h1>
+            <form onsubmit="return compute()">
+            <input type= "text" placeholder="enter a number" id="num"/>
+            <br/><br/>
+            <input type ="submit" value="Find Sqrt"/>
+        </form>
+        <h1 id="ans"></h1>
+        </center>
+    </body>
+</html>
